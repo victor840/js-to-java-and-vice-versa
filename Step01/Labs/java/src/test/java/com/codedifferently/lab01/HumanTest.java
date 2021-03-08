@@ -1,6 +1,6 @@
 package com.codedifferently.lab01;
 
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class HumanTest {
@@ -10,7 +10,16 @@ public class HumanTest {
      */
     @Test
     public void getNameTest(){
+        //given
         Human human = new Human();
+        human.setName("Victor");
 
+
+        //when
+        String expected = "Victor";
+        String actual = human.getName();
+
+        //then
+        Assert.assertEquals(expected, actual);
     }
 }
